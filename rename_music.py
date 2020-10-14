@@ -17,6 +17,7 @@ with os.scandir(basepath) as entries:
             try:
                 tag = tinytag.TinyTag.get(filedir)
             except tinytag.tinytag.TinyTagException:
+                print("Please add metadata to the file before using this script.")
                 pass
             track_num = tag.track 
             track_name = tag.title
